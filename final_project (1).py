@@ -109,8 +109,18 @@ while True:
         print("Student Added Successfully")
 
     elif selection == 2:
-        student_number = input("Enter Student Number")
+        std_num = int(input("Enter Student Number"))
         # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
+        isFound = False
+        for std in students_list:
+            if std.student_number == std_num:
+                students_list.remove(std)
+                isFound = True
+                break
+        if isFound:
+            print('Task deleted successfully')
+        else:
+            print('Student Does Not Exist')
 
     elif selection == 3:
         student_number = input("Enter Student Number")
