@@ -10,6 +10,11 @@ Delivery Date : 22/6/2023
 # course_id (generated using uuid4) ,
 # course name (user_input) and
 # course mark (user_input)
+class Course:
+    def _init_(self):
+        self.course_id = str(uuid.uuid4())
+        self.course_name =''
+        self.course_mark = 0
 
 
 class Student:
