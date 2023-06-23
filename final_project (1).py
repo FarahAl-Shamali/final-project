@@ -2,8 +2,9 @@
 # TODO 1 Enter your name and submission date
 Name : Farah Al_Shamali
 Delivery Date : 22/6/2023
-
 """
+import uuid
+
 
 
 # TODO 2 Define Course Class and define constructor with
