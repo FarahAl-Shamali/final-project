@@ -139,14 +139,18 @@ while True:
 
 
 
-
-
-
-
-
     elif selection == 4:
-        student_number = input("Enter Student Number")
+        std_num = int(input("Enter Student Number"))
         # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
+        isFound = False
+        for std in students_list:
+            if std.student_number == std_num:
+                av = std.get_student_average()
+                print(f'average= {av}')
+                isFound = True
+                break
+            if not isFound:
+                print('Student Does Not Exist')
 
     elif selection == 5:
         student_number = input("Enter Student Number")
