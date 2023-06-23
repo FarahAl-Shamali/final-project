@@ -72,12 +72,20 @@ students_list = []
 while True:
 
     # TODO 9 handle Exception for selection input
-    selection = int(input("1.Add New Student\n"
-                          "2.Delete Student\n"
-                          "3.Display Student\n"
-                          "4.Get Student Average\n"
-                          "5.Add Course to student with mark.\n"
-                          "6.Exit"))
+    try:
+        selection = int(input("1.Add New Student\n"
+                              "2.Delete Student\n"
+                              "3.Display Student\n"
+                              "4.Get Student Average\n"
+                              "5.Add Course to student with mark.\n"
+                              "6.Exit"))
+        if 1 <= selection <= 6:
+            break
+        elif selection > 6:
+            print('Enter a valid number:')
+            True
+    except NameError:
+        print("please enter a number between 1 and 6:")
 
     if selection == 1:
 
