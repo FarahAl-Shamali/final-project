@@ -104,7 +104,8 @@ while True:
                 print("Invalid Value")
 
         # TODO 11 create student object and append it to students list
-
+        std = Student(student_name, student_age, student_number)
+        students_list.append(std)
         print("Student Added Successfully")
 
     elif selection == 2:
