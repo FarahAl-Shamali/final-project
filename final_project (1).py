@@ -153,8 +153,17 @@ while True:
                 print('Student Does Not Exist')
 
     elif selection == 5:
-        student_number = input("Enter Student Number")
+        isFound = False
+        std_num = int(input("Enter Student Number"))
         # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
+        for std in students_list:
+            if std.student_number == std_num:
+                c_name = input('Enter the name of the course:')
+                c_mark = int(input('Enter the mark of the course:'))
+                std.enroll_course(c_name, c_mark)
+                break
+            if not isFound:
+                print('Student Does Not Exist')
 
     else:
         # TODO 16 call a function to exit the program
