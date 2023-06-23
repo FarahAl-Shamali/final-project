@@ -57,7 +57,12 @@ class Student:
     # method to get student_average as a value
     def get_student_average(self):
         # TODO 7 return the student average
-        pass
+        sum = 0
+        average = 1.0
+        for course in self.courses_list:
+            sum += course.course_mark
+        average = sum / len(self.courses_list)
+        return average
 
 
 # in Global Scope
