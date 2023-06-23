@@ -5,8 +5,6 @@ Delivery Date : 22/6/2023
 """
 import uuid
 
-
-
 # TODO 2 Define Course Class and define constructor with
 # course_id (generated using uuid4) ,
 # course name (user_input) and
@@ -20,6 +18,7 @@ class Course:
 
 class Student:
     # TODO 3 define static variable indicates total student count
+
     std_count = 0
 
     # TODO 4 define a constructor which includes
@@ -28,14 +27,13 @@ class Student:
     # student_age (user input)
     # student_number (user_input)
     # courses_list (List of Course Objects)
-    def _init_(self, std_name, std_age, std_num):
+    def __init__(self, std_name, std_age, std_num):
         Student.std_count += 1
         self.student_id = str(uuid.uuid4())
         self.student_name = std_name
         self.student_age = std_age
         self.student_number = std_num
         self.courses_list = []
-
 
     # TODO 5 define a method to enroll new course to student courses list
     def enroll_course(self, c_name, c_mark):
@@ -73,7 +71,9 @@ students_list = []
 while True:
 
     # TODO 9 handle Exception for selection input
-    try:
+    while True:
+
+      try:
         selection = int(input("1.Add New Student\n"
                               "2.Delete Student\n"
                               "3.Display Student\n"
@@ -85,7 +85,7 @@ while True:
         elif selection > 6:
             print('Enter a valid number:')
             True
-    except NameError:
+      except NameError:
         print("please enter a number between 1 and 6:")
 
     if selection == 1:
