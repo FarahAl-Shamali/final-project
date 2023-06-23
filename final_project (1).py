@@ -90,7 +90,10 @@ while True:
     if selection == 1:
 
         # TODO 10 make sure that Student number is not exists before
-        student_number = input("Enter Student Number")
+        student_number = int(input("Enter Student Number"))
+        while any(student.student_number == student_number for student in students_list):
+            print('Number a;ready exists Please enter another number:')
+            student_number = int(input('Enter Student Number:'))
 
         student_name = input("Enter Student Name")
         while True:
