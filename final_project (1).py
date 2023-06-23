@@ -27,8 +27,14 @@ class Student:
     # student_age (user input)
     # student_number (user_input)
     # courses_list (List of Course Objects)
-    def __init__(self):
-        pass
+    def _init_(self, std_name, std_age, std_num):
+        Student.std_count += 1
+        self.student_id = str(uuid.uuid4())
+        self.student_name = std_name
+        self.student_age = std_age
+        self.student_number = std_num
+        self.courses_list = []
+
 
     # TODO 5 define a method to enroll new course to student courses list
 
